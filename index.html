@@ -10,10 +10,14 @@
             }
 
             a { font-size: 13px; 
-                color:black;
+                color:rgba(0,0,0,0.87);
                 text-decoration: none;
                 display: block;
                 text-align: right;
+            }
+
+            a:hover {
+                text-decoration: underline;
             }
 
             #FormField {
@@ -50,7 +54,20 @@
                 border: 1px solid #dadce0;
                 color: #202124;
             }
-                 
+
+            input {
+                font-size: 15px;
+            }
+
+            input[type="text"] {
+                padding-left: 20px;
+            }
+
+            input:focus {
+                outline:0px;
+            }
+
+       
         </style>
             
         <!--
@@ -59,14 +76,19 @@
     </head>
     <body>
         <div >  
-            <a href="images.html">Google Images</a>   
-            <a href="advanced.html">Google Advanced Search</a>          
+           
+            <a href="advanced.html" style="float:right; margin-right:10px">Advanced Search</a>     
+            <a href="images.html" style="float:right; margin-right:10px">Images</a>        
        </div>
-       
-        <h1>Google</h1>
+       <div style="clear:both">
+            <img src="google_logo.svg" alt="Google logo">
+        </div>
        
         <form action="https://google.com/search" method="GET" style="margin-top: 30px;">
+          
             <input type="text" name="q" id="FormField" >
+
+  
                 <div style="margin-top: 20px;">
                     <input type="submit"  value="Google Search" class="FormButton" >
                     <input type="submit" name="btnI" value="I'm Feeling Lucky" class="FormButton">
